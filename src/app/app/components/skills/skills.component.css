@@ -1,0 +1,36 @@
+
+
+
+.row{
+    margin-top: 10px;
+    background-color: #a1b5cb;
+    margin-bottom: 10px;
+    justify-content: center;
+   
+}
+h2{
+    text-align: center;
+    background-color: #a1b5cb;
+    margin: 0 0 0;
+    height: 50px;
+    width: 1565;
+    
+}
+
+.progress{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: auto;
+    
+}
+
+p{
+text-align: center;
+font-size: 15px;
+}
+
+.circulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

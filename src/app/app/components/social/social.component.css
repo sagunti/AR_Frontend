@@ -1,0 +1,22 @@
+
+.list-group{
+   --bs-list-group-bg:transparent;
+   --bs-list-group-border-color:transparent;
+}
+.fa-linkedin.fa-2x.text-white:hover{
+   --bs-text-opacity:1;
+   color: darkred !important;
+}
+.fa-github.fa-2x.text-white:hover{
+   --bs-text-opacity:1;
+   color: darkred !important;
+}
+.fa-user-lock.fa-2x.text-white:hover{
+   --bs-text-opacity:1;
+   color: darkred !important;
+
+}
+.fa-whatsapp.fa-2x.text-white:hover{
+   --bs-text-opacity:1;
+   color: darkred !important;
+}

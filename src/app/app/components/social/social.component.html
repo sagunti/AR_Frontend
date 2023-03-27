@@ -1,0 +1,19 @@
+<div >
+    
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item"><a href="https://github.com/sagunti" target="_blank"><i class="fa-brands fa-github fa-2x text-white"></i></a></li>
+        <li class="list-group-item"><a href="https://www.linkedin.com/in/sergio-alepuz-monreal/" target="_blank"><i class="fa-brands fa-linkedin fa-2x text-white"></i></a></li>
+        <li class="list-group-item"> <a href="https://api.whatsapp.com/send?phone=5491164440122" target="_blank"> <i class="fa-brands fa-whatsapp fa-2x text-white"></i></a></li>
+        
+        <li class="list-group-item"> 
+            <!-- boton ir a login-->
+            <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">INGRESO</button>
+            <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
+          <!--  <a href="/login"><i class="fa-solid fa-user-lock fa-2x text-white" (click)="login()" *ngIf="!isLogged"></i></a>
+            <a href="/login"><i class="fa-solid fa-user-unlock fa-2x text-white" (click)="onLogOut()" *ngIf="isLogged"></i></a>
+         -->
+        </li>
+    </ul>
+</div>
+
+

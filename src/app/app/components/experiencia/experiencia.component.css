@@ -1,0 +1,48 @@
+.row{
+    margin-top: 10px;
+    background-color: #a1b5cb;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+.table{
+    vertical-align: middle !important;
+    align-items:center !important;
+    justify-content: center !important;
+}
+
+.contenedor{
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    text-align: center;
+    background-color: #a1b5cb;
+    margin: 0 0 0;
+    height: 50px;
+    width: 1565;
+    
+}
+.text-black{
+    text-align: center;
+    background-color:transparent;
+}
+
+a{
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+
+}
+
+ .carousel-control-next-icon{
+    background-color: #a1b5cb !important;
+}
+
+.carousel-control-prev , .carousel-control-next{
+    background-color: #a1b5cb !important;
+}
+
+
+

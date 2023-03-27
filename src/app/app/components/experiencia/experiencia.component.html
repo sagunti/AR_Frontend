@@ -1,0 +1,73 @@
+<div class="row">
+    <h2>Mis Proyectos</h2>
+    <div class="col-lg-2">
+      <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
+        Nuevo Proyecto 
+      </button>
+    </div>
+
+    <div class="col-lg-11">
+      <table *ngIf="isLogged" class="table">
+          <tbody>
+              <tr *ngFor="let Experiencia of expe" >
+                <td><img  src="{{Experiencia.imagen}}" class="d-block w-50" alt="{{Experiencia.nombreE}}"></td>
+                  <td>
+                      {{Experiencia.nombreE}}
+                  </td>
+                  <td>{{Experiencia.gitHub}}</td>
+                 
+                  <td>{{Experiencia.url}}</td>
+                  <td >
+                      <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}">
+                          <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                  </td>
+                  <td>
+                      <button class="btn btn-danger" (click)="delete(Experiencia.id)">
+                          <i class="bi bi-trash-fill"></i> BORRAR</button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+  <div class="contenedor col-8">
+
+    
+<div *ngIf="!isLogged" id="carouselExampleCaptions" class="carousel slide col-10" data-bs-ride="false">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+   
+  </div>
+
+  <div   class="carousel-inner">
+    <div class="carousel-item active"*ngFor="let experiencia of expe">
+      
+      <img  src="{{experiencia.imagen}}" class="d-block w-100" alt="{{experiencia.nombreE}}">
+      <div  class="carousel-caption d-none d-md-block">
+        <h2 class="text-black">{{experiencia.nombreE}}</h2>
+        <a href="{{experiencia.gitHub}}" target="_blank">Ver repositorio</a>
+        <a href="{{experiencia.url}}" target="_blank">Pruebalo</a>
+        <td *ngIf="isLogged">
+          <button class="btn btn-light" routerLink="/editexp/{{experiencia.id}}">
+              <i class="bi bi-pencil-fill"></i> EDITAR</button>
+      </td>
+      <td *ngIf="isLogged">
+        <button class="btn btn-danger" (click)="delete(experiencia.id)">
+            <i class="bi bi-trash-fill"></i> BORRAR</button>
+    </td>
+      </div>
+
+      <button class="carousel-control-prev  " type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon " aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      
+        
+      </div>
+      
+     
+      
