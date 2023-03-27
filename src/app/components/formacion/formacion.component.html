@@ -1,0 +1,56 @@
+<div class="row">
+  <h2>Educación</h2>
+  <div class="col-lg-2">
+      <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+          Agregar Educación
+      </button>
+  </div>
+  
+  <div  class="col-lg-11">
+      <table *ngIf="isLogged" class="table">
+          <tbody>
+              <tr *ngFor="let Educacion of educacion">
+                <td><img  src="{{Educacion.imagenE}}" class="d-block w-50" alt="{{Educacion.nombreE}}"></td>
+                  <td>
+                      {{Educacion.nombreE}}
+                  </td>
+                  <td>{{Educacion.descripcionE}}</td>
+                  <td >
+                      <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
+                          <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                  </td>
+                  <td >
+                    <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                        <i class="bi bi-trash-fill"></i> BORRAR</button>
+                </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+
+</div>
+
+  
+  <section *ngIf="!isLogged" class="cards">
+    
+    <tr *ngFor="let Educacion of educacion">
+      <div class="card" style="width: 18rem;">
+        <img src="{{Educacion.imagenE}}" class="card-img-top" alt="uji">
+        <div class="card-body">
+          <h5 class="card-title">{{Educacion.nombreE}}</h5>
+          <p class="card-text">{{Educacion.descripcionE}}</p>
+          
+    
+    </div>
+    <td *ngIf="isLogged">
+      <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
+          <i class="bi bi-pencil-fill"></i> EDITAR</button>
+  </td>
+  <td *ngIf="isLogged">
+    <button class="btn btn-danger" (click)="delete(Educacion.id)">
+        <i class="bi bi-trash-fill"></i> BORRAR</button>
+</td>
+    </div>
+
+    </tr>
+  </section>
